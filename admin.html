@@ -2537,7 +2537,7 @@
     }
 
     function openQRPage() {
-      window.open('flektif-self-order.html', '_blank');
+      window.open('index.html', '_blank');
     }
 
     // Simple QR code generator (matrix)
@@ -2545,7 +2545,7 @@
       const canvas = document.getElementById('qr-canvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
-      const url = window.location.href.replace('coffeeshop-pos.html', 'flektif-self-order.html');
+      const url = window.location.href.replace('admin.html', 'index.html');
       const label = document.getElementById('qr-url-label');
       if (label) label.textContent = url;
 
@@ -2555,6 +2555,7 @@
       img.onload = function () { ctx.drawImage(img, 0, 0, 180, 180); };
       img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(url) + '&bgcolor=ffffff&color=1a0a00&margin=8';
     }
+    
 
     // ═══════════════════════════════════════════════
     // INIT
